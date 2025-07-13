@@ -1,17 +1,38 @@
-# Welcome to MkDocs
+# Home
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+MisuDB is a distributed database engine designed for high performance and scalability. At its core, MisuDB leverages a skiplist-based architecture for in-memory key-value storage. For persistent, on-disk storage, MisuDB utilizes Log-Structured Merge (LSM) trees. Consensus is ensured using the Raft protocol.
 
-## Commands
+## Quick Start
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+You can install MisuDB by cloning the repository and running Goreleaser to build the binaries locally.
 
-## Project layout
+### Using Goreleaser
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+First, clone the repository:
+
+```sh
+git clone https://github.com/misudb/misudb.git
+cd misudb
+```
+
+Then, build the binaries using [Goreleaser](https://goreleaser.com/):
+
+```sh
+goreleaser build --clean
+```
+
+The built binaries will be available in the `dist/` directory.
+
+### Building from Source
+
+Alternatively, you can build the executables directly with Go:
+
+```sh
+go install github.com/misudb/misudb/cmd/misudb@latest
+go install github.com/misudb/misudb/cmd/misusql@latest
+go install github.com/misudb/misudb/cmd/misukv@latest
+```
+
+## License
+
+This project is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).

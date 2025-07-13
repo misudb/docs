@@ -1,5 +1,30 @@
 site_name: MisuDB Documentation
-
 site_url: https://misudb.github.io/docs
+
+site_description: Documentation for MisuDB, a distributed database engine.
+repo_url: https://github.com/misudb/misudb
+repo_name: misudb/misudb
+
 theme:
   name: material
+
+  features:
+    - content.code.copy
+    - content.code.select
+
+    - content.action.edit
+    - content.action.view
+
+
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
