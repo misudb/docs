@@ -1,0 +1,5 @@
+site_name: MisuDB Documentation
+
+site_url: https://misudb.github.io/docs
+theme:
+  name: material
